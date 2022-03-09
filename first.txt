@@ -1,0 +1,68 @@
+//The first Task
+#include <iostream>
+using namespace std;
+
+double calculator(double x, double y, char operation) {
+	switch (operation) {
+		case('+'):
+			return x + y;
+		case('-'):
+			return x - y;
+		case('/'):
+			return x / y;
+		case('*'):
+			return x * y;
+		default:
+			cout << "none";
+			return -1;
+	}
+}
+int main() {
+	double x, y;
+	char operation;
+	cin >> x >> y >> operation;
+	cout << calculator(x, y, operation);
+	return 0;
+}
+
+
+
+//The second task		
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main() {
+	int num1;
+	cout << "Hello! Please, add your number: ";
+	cin >> num1;
+	cout << num1 % 10;	//делае
+	Sleep(5000);     
+	return 0;
+}
+
+//The third task
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+
+    while (1) {
+        int n;
+        string apple = "яблок";
+        cin >> n;
+        if (n == 1 || n % 10 == 1) {
+            apple += "о";
+        }
+        if ((n > 1 && n < 5) || (n % 10 > 1 && n % 10 < 5)) {
+            apple += "а";
+        }
+        if ((n >= 5 && n < 10) || (n % 10 >= 5 && n % 10 < 10) || (n % 100 > 10 && n % 100 < 15)) {
+            apple = "яблок";
+        }
+
+        cout << n << ' ' << apple << endl;
+    }
+}

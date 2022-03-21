@@ -1,0 +1,87 @@
+ // The first task
+    #include <iostream>
+  
+    using namespace std;
+    int main() {
+        cout << "Hello, World!";  // Hello, Stepik!
+        return 0;
+
+       }
+
+ // The second task
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	{
+		setlocale(LC_ALL, "Russian");
+		cout << "Русский текст в консоли" << endl;
+	}
+
+	int number_of_words = 0;
+	string previous = "";  // не слово
+	string current;
+	while (cin >> current) {
+		++number_of_words; //поднимаем счётчик слов
+		if (previous == current)
+			cout << "Слово повторилось" << current << " во столько " << number_of_words << "слов." << '\n';
+		previous = current;
+	}
+}
+
+
+ //The third task
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    int j = 1;
+    int number = 0;
+    char str[64]; 
+    cout << "Введите число в двоичной системе:\n";
+    cin >> str;
+    for (int i = 0; i < strlen(str); i++)
+    {
+        number *= 2;
+        number += str[i] - '0';  // 
+    }
+    cout << "В десятичной системе счисления равно: " << number << endl;
+    system("pause");
+    return 0;
+}
+
+//The fourth task
+#include <iostream>
+#include <math.h>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+    {
+        setlocale(LC_ALL, "Russian");
+        cout << "Русский текст в консоли" << endl;
+    }
+    int dec;
+    int bin = 0;
+    int j;
+
+    cout << "Введите число, которое необходимо перевести в двоичную систему счисления: ";
+    cin >> dec;
+    for (j = 0; dec > 0; j++)
+    {
+        bin += (dec % 2) * pow(10.0, j);
+        dec /= 2;
+    }
+
+    cout << bin << endl;
+    system("pause");
+    return 0;
+}
